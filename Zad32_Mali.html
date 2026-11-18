@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Zadanie 32 – Malik</title>
+ </head>
+<body bgcolor="yellow">
+ <div style="color:green;font-size:37px;">
+ <script type="text/javascript">
+ function Spodnie(rodzaj_m,kolor_m,rozmiar_m,material_m) 
+ {
+ this.rodzaj=rodzaj_m;
+ this.kolor=kolor_m;
+ this.rozmiar=rozmiar_m;
+ this.material=material_m;
+ } 
+ Spodnie.prototype.Spodnie_wyswietl_malik = function () 
+ {
+ alert(this.rodzaj + " " + this.kolor + " " + this.rozmiar + " " + this.material);
+ };
+ Spodnie.prototype.cena = 120; 
+ Spodnie.prototype.Spodnie_pokaz_malik = function ()
+ {
+ alert("Cena: " + this.cena + " zł");
+ };
+ var spodnie1 = new Spodnie("jeansy", "granatowe", "M", "bawełna"); 
+ var spodnie2 = new Spodnie("dresowe", "czarne", "L", "poliester"); 
+ var spodnie3 = new Spodnie("eleganckie", "szare", "S", "wełna");    
+
+ spodnie1.Spodnie_wyswietl_malik();
+ spodnie2.Spodnie_wyswietl_malik(); 
+ spodnie3.Spodnie_wyswietl_malik(); 
+ spodnie1.Spodnie_pokaz_malik(); 
+ document.write("Moje nazwisko to Malik nr. 13 a obiekt to Spodnie"+"<br>");
+ document.write("dostęp do pól spodnie1, spodnie2 i spodnie3"+"<br>");
+ document.write("czyli wypisanie danych"+"<br>");
+
+ document.write("spodnie pierwsze =>"+" "+spodnie1.rodzaj+" "+spodnie1.kolor+" "+spodnie1.rozmiar+" "+spodnie1.material+"<br>");
+ document.write("spodnie drugie =>"+" "+spodnie2.rodzaj+" "+spodnie2.kolor+" "+spodnie2.rozmiar+" "+spodnie2.material+"<br>");
+ document.write("spodnie trzecie =>"+" "+spodnie3.rodzaj+" "+spodnie3.kolor+" "+spodnie3.rozmiar+" "+spodnie3.material+"<br>");
+ document.write("nowe pole cena =>"+" "+spodnie1.cena+"<br>");
+ </script>
+</div>
+<div style="color:blue;font-size:21px;"><br>
+programowanie obiektowe:<br>
+Obiekt to Spodnie, pola: rodzaj, kolor, rozmiar, material<br>
+metoda: Spodnie_wyswietl_malik()<br>
+nowe pole poza ciałem konstruktora: cena<br>
+nowa metoda poza ciałem konstruktora: Spodnie_pokaz_malik()<br>
+Słowo kluczowe prototype stosowane jest do:<br>
+definiowania metod i właściwości dla obiektu, także dodawania nowych metod lub właściwości do istniejących obiektów <br>
+Słowo kluczowe new stosowane jest do:<br>
+utworzenia nowego obiektu na podstawie konstruktora <br>
+</div>
+</body>
+</html>
